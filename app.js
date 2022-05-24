@@ -108,7 +108,7 @@ app.route("/articles/:articleTitle")
 
 .delete(function(req, res){
 
-  Article.findByIdAndDelete(
+  Article.deleteOne(
     {title: req.params.articleTitle},
     function(err){
       if (!err){
